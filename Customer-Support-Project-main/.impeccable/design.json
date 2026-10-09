@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-10T00:00:00Z",
+  "title": "Design System: TicketSense Support Workspace",
+  "extensions": {
+    "colorMeta": {
+      "evergreen": {
+        "role": "primary",
+        "displayName": "Civic Evergreen",
+        "canonical": "#124b45",
+        "tonalRamp": ["#f1f5ef", "#e8f1e9", "#d7e5db", "#bfd4c8", "#9bb8a8", "#769887", "#3c6253", "#124b45"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Deep Ink",
+        "canonical": "#183e37",
+        "tonalRamp": ["#f7faf5", "#e8f1e9", "#d7e5db", "#bfd4c8", "#9bb8a8", "#769887", "#3c6253", "#183e37"]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Mineral Paper",
+        "canonical": "#e8f1e9",
+        "tonalRamp": ["#12352e", "#1d463b", "#295345", "#3c6253", "#769887", "#bfd4c8", "#d7e5db", "#e8f1e9"]
+      },
+      "paper-raised": {
+        "role": "neutral",
+        "displayName": "Raised Paper",
+        "canonical": "#f7faf5",
+        "tonalRamp": ["#12352e", "#1d463b", "#295345", "#3c6253", "#769887", "#bfd4c8", "#d7e5db", "#f7faf5"]
+      },
+      "divider": {
+        "role": "neutral",
+        "displayName": "Divider Green",
+        "canonical": "#ccdcd2",
+        "tonalRamp": ["#12352e", "#1d463b", "#295345", "#3c6253", "#769887", "#9bb8a8", "#bfd4c8", "#ccdcd2"]
+      },
+      "route-amber": {
+        "role": "tertiary",
+        "displayName": "Route Amber",
+        "canonical": "#e6bf5b",
+        "tonalRamp": ["#5c4513", "#80631d", "#a4822b", "#c5a23d", "#d4b14c", "#e6bf5b", "#efd58d", "#f7ecc9"]
+      },
+      "priority-coral": {
+        "role": "secondary",
+        "displayName": "Priority Coral",
+        "canonical": "#df715b",
+        "tonalRamp": ["#54221a", "#7b3125", "#a44331", "#bf5642", "#d46751", "#df715b", "#e9a092", "#f3d2ca"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Workspace Headline", "purpose": "Main workspace headings." },
+      "body": { "displayName": "Support Copy", "purpose": "Ticket content, descriptions, and controls." },
+      "label": { "displayName": "Measured Label", "purpose": "Identifiers and compact data values." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "workspace-enter", "value": "420ms cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "One restrained workspace entrance." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The primary action in a support workflow.",
+      "html": "<button class=\"ds-btn-primary\">Classify a ticket</button>",
+      "css": ".ds-btn-primary { background: #e6bf5b; color: #183e37; padding: 10px 16px; border: 0; border-radius: 6px; font: 700 14px 'Public Sans', sans-serif; transition: background 180ms ease; } .ds-btn-primary:hover { background: #f0d47e; } .ds-btn-primary:focus-visible { outline: 2px solid #df715b; outline-offset: 3px; }"
+    },
+    {
+      "name": "Workspace Input",
+      "kind": "input",
+      "description": "Text field for customer inquiry input.",
+      "html": "<textarea class=\"ds-input\" aria-label=\"Customer inquiry\"></textarea>",
+      "css": ".ds-input { width: 100%; padding: 16px; border: 1px solid #295345; border-radius: 12px; background: #12352e; color: #e8f1e9; font: 400 14px/1.6 'Public Sans', sans-serif; } .ds-input:focus-visible { outline: 2px solid #df715b; outline-offset: 3px; }"
+    },
+    {
+      "name": "Active Navigation Item",
+      "kind": "nav",
+      "refersTo": "nav-item-active",
+      "description": "Selected destination in the evergreen app rail.",
+      "html": "<button class=\"ds-nav-active\"><span class=\"ds-nav-icon\" aria-hidden=\"true\">&#9679;</span>Overview</button>",
+      "css": ".ds-nav-active { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 44px; padding: 0 12px; border: 0; border-radius: 6px; background: #e8f1e9; color: #124b45; text-align: left; font: 600 13px 'Public Sans', sans-serif; } .ds-nav-active:hover { background: #f7faf5; } .ds-nav-active:focus-visible { outline: 2px solid #df715b; outline-offset: 3px; } .ds-nav-icon { font-size: 12px; }"
+    },
+    {
+      "name": "Summary Card",
+      "kind": "card",
+      "refersTo": "surface-card",
+      "description": "Compact count or workflow shortcut on the overview.",
+      "html": "<article class=\"ds-summary-card\"><strong>27</strong><span>Supported intents</span></article>",
+      "css": ".ds-summary-card { display: flex; flex-direction: column; gap: 4px; padding: 20px; border: 1px solid #ccdcd2; border-radius: 8px; background: #f7faf5; color: #183e37; } .ds-summary-card strong { font: 700 24px 'Public Sans', sans-serif; } .ds-summary-card span { color: #587d6c; font: 500 12px 'Public Sans', sans-serif; }"
+    },
+    {
+      "name": "Ticket Route",
+      "kind": "custom",
+      "description": "Connects intent, assigned team, and response target.",
+      "html": "<div class=\"ds-route\"><span>Intent</span><i></i><span>Assigned team</span><i></i><span>Response target</span></div>",
+      "css": ".ds-route { display: flex; align-items: center; gap: 12px; color: #183e37; font: 600 12px 'Public Sans', sans-serif; } .ds-route i { position: relative; flex: 1; min-width: 24px; height: 2px; background: #a4cbb8; } .ds-route i::after { position: absolute; left: 50%; top: 50%; width: 8px; height: 8px; border: 2px solid #124b45; border-radius: 50%; background: #e6bf5b; content: ''; transform: translate(-50%, -50%); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Civic Wayfinding",
+    "overview": "TicketSense is an operational workspace, not a model demonstration. Its visual language borrows the legibility of civic route systems: an evergreen rail gives the app a stable home, a pale mineral surface keeps long work sessions comfortable, and warm markers distinguish the next step in a ticket's route. The interface keeps standard web navigation and controls. Its signature route line links predicted intent, assigned team, and response target without competing with the customer message. One documentary support-team photograph appears on the overview only.",
+    "keyCharacteristics": [
+      "Evergreen navigation rail with a selected destination in pale green.",
+      "Open, pale work surface with restrained borders and compact operational labels.",
+      "Amber for primary action and route junctions; coral for urgent states.",
+      "The API and model evaluation tools are outside the agent-facing navigation."
+    ],
+    "rules": [
+      { "name": "The Route Marker Rule", "body": "Amber marks an action or an explicit route junction; coral is reserved for priority and error meaning.", "section": "colors" },
+      { "name": "The Surface Rule", "body": "Separate work areas with surface tone and spacing before adding shadow.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep classifier, batch triage, catalog, and SLA routing as distinct agent destinations.",
+      "Do keep the support-team photograph on the overview only.",
+      "Do preserve the model's result, assigned routing, confidence, and SLA values exactly."
+    ],
+    "donts": [
+      "Don't bring model benchmarks or API controls into the agent navigation.",
+      "Don't use route colors decoratively; keep amber and coral tied to their named jobs.",
+      "Don't change the FastAPI contract from frontend presentation work."
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "title": "TicketSense app direction",
+  "question": "The direction roll ran without catalog challengers. Choose the visual direction for the support-agent app.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Civic Wayfinding",
+      "kicker": "THE ROLL",
+      "lineage": "Public transit and civic wayfinding systems",
+      "thesis": "Every customer ticket gets a clear route to the team that can resolve it.",
+      "palette": ["#124b45", "#e8f1e9", "#e6bf5b", "#df715b"],
+      "materials": ["route-line notation", "high-contrast service markers"],
+      "viewport": "A compact app rail separates support tasks; the home workspace leads with classification and shows each result as a clear team and SLA route.",
+      "risk": "The route motif must clarify a result without competing with the customer message."
+    },
+    {
+      "id": "model-pick",
+      "label": "Customer Care Desk",
+      "kicker": "IMPECCABLE'S PICK",
+      "lineage": "Contemporary service-desk labels and support-team workspaces",
+      "thesis": "Keep customer messages and case outcomes legible at a glance.",
+      "palette": ["#173d37", "#f1f3e9", "#e6c75b", "#e9826d"],
+      "materials": ["color-coded service labels", "documentary support-team photography"],
+      "viewport": "A persistent app rail separates daily support tasks; the home screen pairs one real support-team image with the classifier and direct workflow shortcuts.",
+      "risk": "The structure is familiar; the color system and routing treatment must give it a distinct identity."
+    }
+  ],
+  "reroll": {
+    "registers": ["safer", "bolder"]
+  },
+  "canon": true,
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "A clean, conventional customer-support operations dashboard.",
+    "palette": ["#ffffff", "#17211f", "#167a68"],
+    "materials": ["clear task hierarchy", "standard dashboard components"],
+    "viewport": "A familiar sidebar app with a classifier workspace, routing results, and separate tools.",
+    "risk": "The familiar arrangement offers less product-specific character."
+  },
+  "steer": true
+}
